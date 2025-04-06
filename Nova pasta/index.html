@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editor de Vídeos Multi-Idiomas</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
+    <style>
+        #status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .error { background-color: #ffdddd; color: #ff0000; }
+        .warning { background-color: #fff3cd; color: #856404; }
+        .success { background-color: #d4edda; color: #155724; }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>Editor de Vídeos para YouTube Multi-Idiomas</h1>
+        
+        <!-- Upload do vídeo -->
+        <input type="file" id="videoInput" accept="video/*">
+        
+        <!-- Botão de processamento -->
+        <button id="processBtn" disabled>Processar Vídeo</button>
+        
+        <!-- Área de status -->
+        <div id="status" class="warning">Inicializando o editor de vídeo...</div>
+        
+        <!-- Área de resultados -->
+        <div id="results"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
